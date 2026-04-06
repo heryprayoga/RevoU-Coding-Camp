@@ -17,7 +17,7 @@ Build a self-contained `index.html` single-page website with Tailwind CSS (CDN) 
   - Apply Tailwind responsive prefixes for layout breakpoints
   - _Requirements: 1.1, 1.2, 1.3, 2.1, 2.2, 2.4, 3.1, 3.2, 4.1, 4.2, 5.1, 6.1, 7.1, 7.2, 7.3_
 
-- [-] 2. Implement JS modules in inline `<script>` block
+- [x] 2. Implement JS modules in inline `<script>` block
   - [x] 2.1 Implement `FooterYear.init()` — query `#copyright-year`, set `textContent` to `new Date().getFullYear()`; log warning and exit if element missing
     - _Requirements: 6.2_
 
@@ -28,14 +28,14 @@ Build a self-contained `index.html` single-page website with Tailwind CSS (CDN) 
     - **Property 2: Mobile menu toggle is consistent**
     - **Validates: Requirements 2.5, 7.4**
 
-  - [-] 2.4 Implement `SmoothScroller.init()` — query all `<a href="#...">` anchors; on click call `preventDefault` and `scrollIntoView({ behavior: 'smooth' })`; skip silently if target not found
+  - [x] 2.4 Implement `SmoothScroller.init()` — query all `<a href="#...">` anchors; on click call `preventDefault` and `scrollIntoView({ behavior: 'smooth' })`; skip silently if target not found
     - _Requirements: 2.3, 3.3_
 
   - [ ]\* 2.5 Write property test for SmoothScroller (Property 1)
     - **Property 1: Smooth scroll targets correct section**
     - **Validates: Requirements 2.3, 3.3**
 
-  - [~] 2.6 Implement `Validator.init()` — query `#contact-form`; on submit run `validateRequired` and `validateEmail`; show inline errors on failure; show success message and call `form.reset()` on all-pass
+  - [x] 2.6 Implement `Validator.init()` — query `#contact-form`; on submit run `validateRequired` and `validateEmail`; show inline errors on failure; show success message and call `form.reset()` on all-pass
     - Email regex: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
     - _Requirements: 5.2, 5.3, 5.4_
 
@@ -47,13 +47,13 @@ Build a self-contained `index.html` single-page website with Tailwind CSS (CDN) 
     - **Property 4: Valid form submission resets state**
     - **Validates: Requirements 5.4**
 
-  - [~] 2.9 Wire all modules — call `FooterYear.init()`, `MobileMenu.init()`, `SmoothScroller.init()`, `Validator.init()` inside a `DOMContentLoaded` listener
+  - [x] 2.9 Wire all modules — call `FooterYear.init()`, `MobileMenu.init()`, `SmoothScroller.init()`, `Validator.init()` inside a `DOMContentLoaded` listener
 
-- [~] 3. Checkpoint — Ensure all tests pass
+- [x] 3. Checkpoint — Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [~] 4. Write unit tests for structural and DOM requirements
-  - [~] 4.1 Write unit tests for HTML document structure
+- [-] 4. Write unit tests for structural and DOM requirements
+  - [-] 4.1 Write unit tests for HTML document structure
     - Verify DOCTYPE, semantic elements, viewport meta, Tailwind CDN link
     - _Requirements: 1.1, 1.2, 1.3_
 

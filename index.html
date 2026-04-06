@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans text-gray-800">
+    <!-- Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow">
+      <nav
+        class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <a href="#" class="text-xl font-bold text-indigo-600">MySite</a>
+
+        <!-- Desktop links -->
+        <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium">
+          <li>
+            <a href="#hero" class="hover:text-indigo-600 transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#features" class="hover:text-indigo-600 transition-colors"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-indigo-600 transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Hamburger button (mobile) -->
+        <button
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          class="md:hidden flex flex-col gap-1.5 p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          <span class="block w-6 h-0.5 bg-gray-700"></span>
+          <span class="block w-6 h-0.5 bg-gray-700"></span>
+          <span class="block w-6 h-0.5 bg-gray-700"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile nav links (hidden by default) -->
+      <div
+        id="nav-links-mobile"
+        class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4"
+      >
+        <ul class="flex flex-col gap-3 text-sm font-medium pt-3">
+          <li>
+            <a href="#hero" class="hover:text-indigo-600 transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#features" class="hover:text-indigo-600 transition-colors"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-indigo-600 transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-white px-4"
+      >
+        <div class="max-w-2xl text-center">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight"
+          >
+            Build Something Amazing
+          </h1>
+          <p class="text-lg md:text-xl text-gray-600 mb-8">
+            A clean, fast, and accessible single-page website built with HTML5,
+            Tailwind CSS, and Vanilla JS. No build step required.
+          </p>
+          <a
+            href="#features"
+            class="inline-block bg-indigo-600 text-white text-base font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            Explore Features
+          </a>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="py-20 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4"
+          >
+            Features
+          </h2>
+          <p class="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+            Everything you need to get started, right out of the box.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="bg-indigo-50 rounded-xl p-6 flex flex-col items-center text-center shadow-sm"
+            >
+              <div class="text-4xl mb-4" aria-hidden="true">⚡</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Lightning Fast
+              </h3>
+              <p class="text-gray-600 text-sm">
+                No build tools, no bundlers. Just a single HTML file served
+                directly to the browser.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-indigo-50 rounded-xl p-6 flex flex-col items-center text-center shadow-sm"
+            >
+              <div class="text-4xl mb-4" aria-hidden="true">📱</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Fully Responsive
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Tailwind CSS responsive prefixes ensure a great experience on
+                every screen size.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-indigo-50 rounded-xl p-6 flex flex-col items-center text-center shadow-sm"
+            >
+              <div class="text-4xl mb-4" aria-hidden="true">♿</div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Accessible
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Semantic HTML, ARIA attributes, and keyboard-friendly
+                interactions built in from the start.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-gray-50 px-4">
+        <div class="max-w-xl mx-auto">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4"
+          >
+            Get in Touch
+          </h2>
+          <p class="text-center text-gray-500 mb-10">
+            Have a question or want to work together? Send us a message.
+          </p>
+
+          <form
+            id="contact-form"
+            novalidate
+            class="bg-white rounded-xl shadow-sm p-8 flex flex-col gap-6"
+          >
+            <!-- Name field -->
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <span
+                id="name-error"
+                class="text-red-500 text-xs mt-1 hidden"
+                role="alert"
+              ></span>
+            </div>
+
+            <!-- Email field -->
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <span
+                id="email-error"
+                class="text-red-500 text-xs mt-1 hidden"
+                role="alert"
+              ></span>
+            </div>
+
+            <!-- Message field -->
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your message..."
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+              ></textarea>
+              <span
+                id="message-error"
+                class="text-red-500 text-xs mt-1 hidden"
+                role="alert"
+              ></span>
+            </div>
+
+            <!-- Success message -->
+            <p
+              id="form-success"
+              class="text-green-600 text-sm font-medium hidden"
+              role="status"
+            >
+              Thanks! Your message has been sent successfully.
+            </p>
+
+            <button
+              type="submit"
+              class="bg-indigo-600 text-white font-semibold py-2.5 rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-sm py-6 px-4 text-center">
+      <p>
+        &copy; <span id="copyright-year"></span> MySite. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const FooterYear = {
+        init() {
+          const el = document.querySelector("#copyright-year");
+          if (!el) {
+            console.warn("FooterYear: #copyright-year element not found");
+            return;
+          }
+          el.textContent = new Date().getFullYear();
+        },
+      };
+
+      const MobileMenu = {
+        init() {
+          const hamburger = document.querySelector("#hamburger");
+          const navLinksMobile = document.querySelector("#nav-links-mobile");
+          if (!hamburger || !navLinksMobile) {
+            console.warn(
+              "MobileMenu: #hamburger or #nav-links-mobile element not found",
+            );
+            return;
+          }
+          hamburger.addEventListener("click", () => {
+            navLinksMobile.classList.toggle("hidden");
+            const isExpanded =
+              hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute(
+              "aria-expanded",
+              isExpanded ? "false" : "true",
+            );
+          });
+        },
+      };
+
+      const SmoothScroller = {
+        init() {
+          const anchors = document.querySelectorAll('a[href^="#"]');
+          anchors.forEach((anchor) => {
+            anchor.addEventListener("click", (event) => {
+              event.preventDefault();
+              const targetId = anchor.getAttribute("href").slice(1);
+              const targetEl = document.getElementById(targetId);
+              if (targetEl) {
+                targetEl.scrollIntoView({ behavior: "smooth" });
+              }
+            });
+          });
+        },
+      };
+
+      const Validator = {
+        init() {
+          const form = document.querySelector("#contact-form");
+          if (!form) {
+            console.warn("Validator: #contact-form element not found");
+            return;
+          }
+
+          form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const nameField = document.getElementById("name");
+            const emailField = document.getElementById("email");
+            const messageField = document.getElementById("message");
+            const successEl = document.getElementById("form-success");
+
+            const nameError = document.getElementById("name-error");
+            const emailError = document.getElementById("email-error");
+            const messageError = document.getElementById("message-error");
+
+            let valid = true;
+
+            // Validate name
+            if (!Validator.validateRequired(nameField)) {
+              nameError.textContent = "Name is required.";
+              nameError.classList.remove("hidden");
+              valid = false;
+            } else {
+              nameError.classList.add("hidden");
+              nameError.textContent = "";
+            }
+
+            // Validate email (required + format)
+            if (!Validator.validateRequired(emailField)) {
+              emailError.textContent = "Email is required.";
+              emailError.classList.remove("hidden");
+              valid = false;
+            } else if (!Validator.validateEmail(emailField)) {
+              emailError.textContent = "Please enter a valid email address.";
+              emailError.classList.remove("hidden");
+              valid = false;
+            } else {
+              emailError.classList.add("hidden");
+              emailError.textContent = "";
+            }
+
+            // Validate message
+            if (!Validator.validateRequired(messageField)) {
+              messageError.textContent = "Message is required.";
+              messageError.classList.remove("hidden");
+              valid = false;
+            } else {
+              messageError.classList.add("hidden");
+              messageError.textContent = "";
+            }
+
+            if (valid) {
+              successEl.classList.remove("hidden");
+              form.reset();
+              nameError.classList.add("hidden");
+              nameError.textContent = "";
+              emailError.classList.add("hidden");
+              emailError.textContent = "";
+              messageError.classList.add("hidden");
+              messageError.textContent = "";
+            } else {
+              successEl.classList.add("hidden");
+            }
+          });
+        },
+
+        validateRequired(field) {
+          return field.value.trim() !== "";
+        },
+
+        validateEmail(field) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        FooterYear.init();
+        MobileMenu.init();
+        SmoothScroller.init();
+        Validator.init();
+      });
+    </script>
+  </body>
+</html>
